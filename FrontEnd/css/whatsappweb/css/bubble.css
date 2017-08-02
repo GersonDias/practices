@@ -1,19 +1,16 @@
-/* Right triangle placed top right flush. */
-
-.tri-right.border.right-top:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: auto;
-    right: -40px;
-    top: -8px;
-    bottom: auto;
-    border: 25px solid;
-    border-color: #666 transparent transparent transparent;
+.talk-bubble {
+    margin: 40px;
+    margin-bottom: -15px;
+    display: inline-block;
+    position: relative;
+    max-width: 42.5%;
+    min-width: 28px;
+    height: auto;
+    background-color: lightyellow;
 }
 
-.tri-right.right-top:after {
+/* Right bubbles (messages from me) */
+.talk-bubble--tri-right.talk-bubble--right-top:after {
     content: ' ';
     position: absolute;
     width: 0;
@@ -26,23 +23,7 @@
     border-color: lightyellow transparent transparent transparent;
 }
 
-
-/* Right triangle placed top right flush. */
-
-.tri-right.border.right-top:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: auto;
-    right: -40px;
-    top: -8px;
-    bottom: auto;
-    border: 32px solid;
-    border-color: #666 transparent transparent transparent;
-}
-
-.tri-right.right-top:after {
+.talk-bubble--tri-right.talk-bubble--right-top:after {
     content: ' ';
     position: absolute;
     width: 0;
@@ -55,23 +36,8 @@
     border-color: lightyellow transparent transparent transparent;
 }
 
-
-/* left triangle placed top right flush. */
-
-.tri-right.border.left-top:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: -40px;
-    right: auto;
-    top: -8px;
-    bottom: auto;
-    border: 33px solid;
-    border-color: #666 transparent transparent transparent;
-}
-
-.tri-right.left-top:after {
+/* Left bubble (messages to you)*/
+.talk-bubble--tri-right.talk-bubble--left-top:after {
     content: ' ';
     position: absolute;
     width: 0;
@@ -84,9 +50,7 @@
     border-color: #FCFCFC transparent transparent transparent;
 }
 
-
 /* talk bubble contents */
-
 .talktext {
     padding: 1em;
     text-align: left;
@@ -99,29 +63,14 @@
     -webkit-margin-after: 0em;
 }
 
-.talk-bubble {
-    margin: 40px;
-    margin-bottom: -15px;
-    display: inline-block;
-    position: relative;
-    max-width: 42.5%;
-    min-width: 28px;
-    height: auto;
-    background-color: lightyellow;
-}
-
-.you {
+.talktext--you {
     background-color: #FCFCFC;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
 }
 
-.border {
-    border: 8px solid #666;
-}
-
-.round {
+.talk-bubble--round {
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
