@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        /*
+         * Basics about promisses
+         */
+        let defer = new Promise((resolve, reject) => {
+            // in Promise constructor, need to pass a function with 2 parameters
+            // if you conclude successfull what you want, call resolve with any data
+            // otherwise call reject with any data too.
+            setTimeout(() => {
+                if (true) {
+                    return resolve('yey!');
+                } else {
+                    return reject('error');
+                }
+            }, 2000)
+        })
+
+        defer.then((data) => console.log(data)) // for things "resolved"
+            .catch((err) => console.log(err)); // for things "rejected"
+
+
+        let posts = fetch('https://willianjusten.com.br/search.json');
+
+        posts.then((res) => res.json()) // returning another promise, so I can chain .then method
+            .then((data) => data.map(x => console.log(x.title)))
+            .catch((err) => console.log(err));
+    </script>
+</body>
+</html>
